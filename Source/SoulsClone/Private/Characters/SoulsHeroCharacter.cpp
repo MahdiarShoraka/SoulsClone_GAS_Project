@@ -23,7 +23,7 @@ ASoulsHeroCharacter::ASoulsHeroCharacter()
 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>("CameraBoom");
 	CameraBoom->SetupAttachment(GetRootComponent());
-	CameraBoom->TargetArmLength = 200.f;
+	CameraBoom->TargetArmLength = 250.f;
 	CameraBoom->SocketOffset = FVector(0.f, 55.f, 65.f);
 	CameraBoom->bUsePawnControlRotation = true;
 
