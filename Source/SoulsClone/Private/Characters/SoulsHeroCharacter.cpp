@@ -11,6 +11,7 @@
 #include "Components/Input/SoulsInputComponent.h"
 #include "SoulsGameplayTags.h"
 #include "Engine/LocalPlayer.h"
+#include "AbilitySystem/SoulsAbilitySystemComponent.h"
 
 #include "SoulsDebugHelper.h"
 
@@ -37,6 +38,17 @@ ASoulsHeroCharacter::ASoulsHeroCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 }
 
+void ASoulsHeroCharacter::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	if (SoulsAbilitySystemComponent && SoulsAttributeSet)
+	{
+		const FString ASCText = FString::Printf(TEXT("ASC valid with OwnerActor: %s, AvatarActor: %s"), *SoulsAbilitySystemComponent->GetOwnerActor()->GetActorLabel(), *SoulsAbilitySystemComponent->GetAvatarActor()->GetActorLabel());
+		Debug::Print(ASCText);
+	}
+}
+
 void ASoulsHeroCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -57,8 +69,6 @@ void ASoulsHeroCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 void ASoulsHeroCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
-	Debug::Print(TEXT("Working..."));
 }
 
 void ASoulsHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
@@ -68,6 +78,7 @@ void ASoulsHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
 
 	if (MovementVector.Y != 0.f)
 	{
+		// Forward direction reflects the input (e.g., mouse) rotation
 		const FVector ForwardDirection = MovementRotation.RotateVector(FVector::ForwardVector);
 		AddMovementInput(ForwardDirection, MovementVector.Y);
 	}

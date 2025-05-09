@@ -7,7 +7,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11408c6e-8b22-4204-b9d0-9813181d4bed" name="Changes" comment="" />
+    <list default="true" id="11408c6e-8b22-4204-b9d0-9813181d4bed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsClone.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsClone.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SoulsClone.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/SoulsClone.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/AnimInstances/Hero/SoulsHeroAnimInstance.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/AnimInstances/Hero/SoulsHeroAnimInstance.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/Characters/SoulsBaseCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/Characters/SoulsBaseCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/Characters/SoulsHeroCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/Characters/SoulsHeroCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/AnimInstances/Hero/SoulsHeroAnimInstance.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/AnimInstances/Hero/SoulsHeroAnimInstance.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/Characters/SoulsBaseCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/Characters/SoulsBaseCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/Characters/SoulsHeroCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/Characters/SoulsHeroCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/SoulsClone.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/SoulsClone.Build.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +42,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Plugins/Runtime/GameplayAbilities/Intermediate/Build/Win64/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbility.generated.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Public/Subsystems/LocalPlayerSubsystem.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -45,10 +58,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Uproject.SoulsClone.executor": "Debug",
+    "Uproject.SoulsClone.executor": "Run",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -146,7 +161,8 @@
       <workItem from="1746726040845" duration="157000" />
       <workItem from="1746726229735" duration="69000" />
       <workItem from="1746735365947" duration="2807000" />
-      <workItem from="1746738269336" duration="194000" />
+      <workItem from="1746738269336" duration="277000" />
+      <workItem from="1746795597986" duration="4572000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit + Input Configuration">
       <option name="closed" value="true" />
@@ -164,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746725372269</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="minor adjustments">
+      <option name="closed" value="true" />
+      <created>1746738499302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746738499302</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +211,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit + Input Configuration" />
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="minor adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor adjustments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
