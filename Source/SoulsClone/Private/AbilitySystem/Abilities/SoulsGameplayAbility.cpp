@@ -1,8 +1,8 @@
 // Mahdiar Shoraka All Rights Reserved
 
-
 #include "AbilitySystem/Abilities/SoulsGameplayAbility.h"
 #include "AbilitySystem/SoulsAbilitySystemComponent.h"
+#include "Components/Combat/PawnCombatComponent.h"
 
 void USoulsGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
 {
@@ -30,4 +30,14 @@ void USoulsGameplayAbility::EndAbility(const FGameplayAbilitySpecHandle Handle,
 			ActorInfo->AbilitySystemComponent->ClearAbility(Handle);
 		}
 	}
+}
+
+UPawnCombatComponent* USoulsGameplayAbility::GetPawnCombatComponentFromActorInfo() const
+{
+	return GetAvatarActorFromActorInfo()->FindComponentByClass<UPawnCombatComponent>();
+}
+
+USoulsAbilitySystemComponent* USoulsGameplayAbility::GetUSoulsAbilitySystemComponentFromActorInfo() const
+{
+	return Cast<USoulsAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
 }

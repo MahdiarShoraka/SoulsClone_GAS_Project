@@ -19,16 +19,14 @@ public:
 	void BindNativeInputAction(const UDataAsset_InputConfig* InInputConfig, const FGameplayTag& InInputTag, ETriggerEvent TriggerEvent, UserObject* ContextObject, CallbackFunc Func);
 };
 
+// Inputs are identified by logical tags (Input.Attack) not asset references. 
 template <class UserObject, typename CallbackFunc>
 void USoulsInputComponent::BindNativeInputAction(const UDataAsset_InputConfig* InInputConfig,
 	const FGameplayTag& InInputTag, ETriggerEvent TriggerEvent, UserObject* ContextObject, CallbackFunc Func)
 {
 	checkf(InInputConfig, TEXT("Input config data asset is null, cannot proceed with binding"));
-
-	
 	if (UInputAction* FoundAction = InInputConfig->FindNativeInputActionByTag(InInputTag))
 	{
 		BindAction(FoundAction, TriggerEvent, ContextObject, Func);
 	}
-	
 }

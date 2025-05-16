@@ -25,7 +25,7 @@ struct FSoulsInputActionConfig
 };
 
 /**
- * 
+ * holds all input configurations (actions) and mapping context
  */
 UCLASS()
 class SOULSCLONE_API UDataAsset_InputConfig : public UDataAsset
@@ -33,6 +33,7 @@ class SOULSCLONE_API UDataAsset_InputConfig : public UDataAsset
 	GENERATED_BODY()
 
 public:
+	// Maps input actions to keys/buttons
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UInputMappingContext* DefaultMappingContext;
 
