@@ -10,7 +10,7 @@ class USoulsGameplayAbility;
 class USoulsAbilitySystemComponent;
 
 /**
- * 
+ * Data Shared by the Player and Enemy
  */
 UCLASS()
 class SOULSCLONE_API UDataAsset_StartUpDataBase : public UDataAsset
@@ -18,7 +18,7 @@ class SOULSCLONE_API UDataAsset_StartUpDataBase : public UDataAsset
 	GENERATED_BODY()
 
 public:
-	virtual void GiveToAbilitySystemComponent(USoulsAbilitySystemComponent* InSoulsASCToGive, int32 ApplyLevel = 1);
+	virtual void GiveToAbilitySystemComponent(USoulsAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
 protected:
 	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
 	TArray<TSubclassOf<USoulsGameplayAbility>> ActivateOnGivenAbilities;
@@ -26,5 +26,5 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
 	TArray<TSubclassOf<USoulsGameplayAbility>> ReactiveAbilities;
 
-	void GrantAbilities(const TArray<TSubclassOf<USoulsGameplayAbility>>& InAbilitiesToGive, USoulsAbilitySystemComponent* InSoulsASCToGive, int32 ApplyLevel = 1); 
+	void GrantAbilities(const TArray<TSubclassOf<USoulsGameplayAbility>>& InAbilitiesToGive, USoulsAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1); 
 };

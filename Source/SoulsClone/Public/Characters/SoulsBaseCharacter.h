@@ -10,6 +10,7 @@
 // Forward Declarations
 class USoulsAbilitySystemComponent;
 class USoulsAttributeSet;
+class UDataAsset_StartUpDataBase;
 
 UCLASS()
 class SOULSCLONE_API ASoulsBaseCharacter : public ACharacter, public IAbilitySystemInterface
@@ -35,6 +36,9 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="AbilitySystem")
 	USoulsAttributeSet* SoulsAttributeSet;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="CharacterData")
+	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;
+	
 public:
 	FORCEINLINE USoulsAbilitySystemComponent* GetSoulsAbilitySystemComponent() const { return SoulsAbilitySystemComponent; }
 	FORCEINLINE USoulsAttributeSet* GetSoulsAttribute() const { return SoulsAttributeSet; }

@@ -6,23 +6,22 @@
 #include "AbilitySystem/SoulsAbilitySystemComponent.h"
 #include "AbilitySystem/Abilities/SoulsGameplayAbility.h"
 
-void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(USoulsAbilitySystemComponent* InSoulsASCToGive,
-	int32 ApplyLevel)
+void UDataAsset_StartUpDataBase::GiveToAbilitySystemComponent(USoulsAbilitySystemComponent* InASCToGive, int32 ApplyLevel)
 {
-	check(InSoulsASCToGive);
-	GrantAbilities(ActivateOnGivenAbilities, InSoulsASCToGive, ApplyLevel);
-	GrantAbilities(ReactiveAbilities, InSoulsASCToGive, ApplyLevel);
+	check(InASCToGive);
+	GrantAbilities(ActivateOnGivenAbilities, InASCToGive, ApplyLevel);
+	GrantAbilities(ReactiveAbilities, InASCToGive, ApplyLevel);
 }
 
-void UDataAsset_StartUpDataBase::GrantAbilities(const TArray<TSubclassOf<USoulsGameplayAbility>>& InAbilitiesToGive, USoulsAbilitySystemComponent* InSoulsASCToGive, int32 ApplyLevel)
+void UDataAsset_StartUpDataBase::GrantAbilities(const TArray<TSubclassOf<USoulsGameplayAbility>>& InAbilitiesToGive, USoulsAbilitySystemComponent* InASCToGive, int32 ApplyLevel)
 {
 	if (InAbilitiesToGive.IsEmpty()) return;
 	for (const TSubclassOf<USoulsGameplayAbility>& Ability : InAbilitiesToGive)
 	{
 		if (!Ability) continue;
 		FGameplayAbilitySpec AbilitySpec(Ability);
-		AbilitySpec.SourceObject = InSoulsASCToGive->GetAvatarActor();
+		AbilitySpec.SourceObject = InASCToGive->GetAvatarActor();
 		AbilitySpec.Level = ApplyLevel;
-		InSoulsASCToGive->GiveAbility(AbilitySpec);
+		InASCToGive->GiveAbility(AbilitySpec);
 	}
 }

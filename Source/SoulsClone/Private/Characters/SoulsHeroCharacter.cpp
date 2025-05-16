@@ -11,7 +11,7 @@
 #include "Components/Input/SoulsInputComponent.h"
 #include "SoulsGameplayTags.h"
 #include "Engine/LocalPlayer.h"
-#include "AbilitySystem/SoulsAbilitySystemComponent.h"
+#include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 
 #include "SoulsDebugHelper.h"
 
@@ -42,10 +42,12 @@ void ASoulsHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 
-	if (SoulsAbilitySystemComponent && SoulsAttributeSet)
+	if (!CharacterStartUpData.IsNull())
 	{
-		const FString ASCText = FString::Printf(TEXT("ASC valid with OwnerActor: %s, AvatarActor: %s"), *SoulsAbilitySystemComponent->GetOwnerActor()->GetActorLabel(), *SoulsAbilitySystemComponent->GetAvatarActor()->GetActorLabel());
-		Debug::Print(ASCText);
+		if (UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.LoadSynchronous())
+		{
+			LoadedData->GiveToAbilitySystemComponent(SoulsAbilitySystemComponent);
+		}
 	}
 }
 

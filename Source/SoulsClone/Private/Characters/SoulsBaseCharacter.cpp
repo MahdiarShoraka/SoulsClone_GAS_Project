@@ -31,6 +31,7 @@ void ASoulsBaseCharacter::PossessedBy(AController* NewController)
 	
 	if (SoulsAbilitySystemComponent)
 	{
-		SoulsAbilitySystemComponent->InitAbilityActorInfo(this,this);	
+		SoulsAbilitySystemComponent->InitAbilityActorInfo(this,this);
+		ensureMsgf(!CharacterStartUpData.IsNull(), TEXT("Forgot to assign start up data to %s"), *GetName());
 	}
 }
