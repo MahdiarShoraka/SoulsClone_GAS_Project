@@ -16,7 +16,7 @@ enum class ESoulsAbilityActivationPolicy : uint8
 	OnGiven
 };
 /**
- * 
+ * Base Gameplay Ability class - Provides helper functions
  */
 UCLASS()
 class SOULSCLONE_API USoulsGameplayAbility : public UGameplayAbility

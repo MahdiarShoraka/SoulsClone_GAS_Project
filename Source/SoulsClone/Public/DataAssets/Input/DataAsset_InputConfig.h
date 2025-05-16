@@ -13,6 +13,7 @@ class UInputMappingContext;
 USTRUCT(BlueprintType)
 
 // struct members by default public, class members by default private
+// Links Input Actions to Input Tags
 struct FSoulsInputActionConfig
 {
 	GENERATED_BODY()
@@ -22,6 +23,11 @@ struct FSoulsInputActionConfig
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UInputAction* InputAction;
+
+	bool IsValid() const
+	{
+		return InputTag.IsValid() && InputAction;
+	}
 };
 
 /**
@@ -41,4 +47,7 @@ public:
 	TArray<FSoulsInputActionConfig> NativeInputActions;
 
 	UInputAction* FindNativeInputActionByTag(const FGameplayTag& InInputTag) const;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (TitleProperty = "InputTag"))
+	TArray<FSoulsInputActionConfig> AbilityInputActions;
 };
