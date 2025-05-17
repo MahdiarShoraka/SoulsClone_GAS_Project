@@ -9,16 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="11408c6e-8b22-4204-b9d0-9813181d4bed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsClone.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsClone.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/DA_InputConfig.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/DA_InputConfig.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/Input/Actions/IA_Jump.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/Abilities/SoulsHeroGameplayAbility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/Abilities/SoulsHeroGameplayAbility.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/SoulsGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/SoulsGameplayTags.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/Abilities/SoulsGameplayAbility.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/Abilities/SoulsGameplayAbility.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/Abilities/SoulsHeroGameplayAbility.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/Abilities/SoulsHeroGameplayAbility.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/Components/Input/SoulsInputComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/Components/Input/SoulsInputComponent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/DataAssets/StartUpData/DataAsset_HeroStartUpData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/DataAssets/StartUpData/DataAsset_HeroStartUpData.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/Input/DataAsset_InputConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/Input/DataAsset_InputConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/SoulsGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/SoulsGameplayTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/StartUpData/DataAsset_HeroStartUpData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/StartUpData/DataAsset_HeroStartUpData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +38,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://1" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://0" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Plugins/Runtime/GameplayAbilities/Intermediate/Build/Win64/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbility.generated.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
@@ -175,7 +169,8 @@
       <workItem from="1746821726644" duration="75000" />
       <workItem from="1747328139462" duration="2674000" />
       <workItem from="1747400383463" duration="15998000" />
-      <workItem from="1747425135472" duration="4887000" />
+      <workItem from="1747425135472" duration="5047000" />
+      <workItem from="1747488343878" duration="5044000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit + Input Configuration">
       <option name="closed" value="true" />
@@ -241,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747415842666</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Input setup for Equip and Unequip weapon">
+      <option name="closed" value="true" />
+      <created>1747430186916</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747430186916</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +273,8 @@
     <MESSAGE value="Added Weapon and Startup data assets" />
     <MESSAGE value="Ability System Initialized and Abilities can be given." />
     <MESSAGE value="Made the combat component and Registered Weapon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the combat component and Registered Weapon" />
+    <MESSAGE value="Input setup for Equip and Unequip weapon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input setup for Equip and Unequip weapon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

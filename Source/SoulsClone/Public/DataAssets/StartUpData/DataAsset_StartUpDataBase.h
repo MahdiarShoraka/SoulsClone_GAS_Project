@@ -19,6 +19,7 @@ class SOULSCLONE_API UDataAsset_StartUpDataBase : public UDataAsset
 
 public:
 	virtual void GiveToAbilitySystemComponent(USoulsAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1);
+
 protected:
 	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
 	TArray<TSubclassOf<USoulsGameplayAbility>> ActivateOnGivenAbilities;
