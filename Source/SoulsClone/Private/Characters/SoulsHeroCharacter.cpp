@@ -15,6 +15,7 @@
 #include "Components/Combat/HeroCombatComponent.h"
 
 #include "SoulsDebugHelper.h"
+#include "AbilitySystem/SoulsAbilitySystemComponent.h"
 
 ASoulsHeroCharacter::ASoulsHeroCharacter()
 {
@@ -68,6 +69,8 @@ void ASoulsHeroCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 	USoulsInputComponent* SoulsInputComponent = CastChecked<USoulsInputComponent>(PlayerInputComponent);
 	SoulsInputComponent->BindNativeInputAction(InputConfigDataAsset, SoulsGameplayTags::InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move);
 	SoulsInputComponent->BindNativeInputAction(InputConfigDataAsset, SoulsGameplayTags::InputTag_Look, ETriggerEvent::Triggered, this, &ThisClass::Input_Look);
+
+	SoulsInputComponent->BindAbilityInputAction(InputConfigDataAsset, this, &ThisClass::Input_AbilityInputPressed, &ThisClass::Input_AbilityInputReleased);
 	
 }
 
@@ -78,7 +81,7 @@ void ASoulsHeroCharacter::BeginPlay()
 
 void ASoulsHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
 {
-	const FVector2D MovementVector= InputActionValue.Get<FVector2D>();
+	const FVector2D MovementVector = InputActionValue.Get<FVector2D>();
 	const FRotator MovementRotation(0.f, Controller->GetControlRotation().Yaw, 0.f);
 
 	if (MovementVector.Y != 0.f)
@@ -107,4 +110,14 @@ void ASoulsHeroCharacter::Input_Look(const FInputActionValue& InputActionValue)
 	{
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void ASoulsHeroCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
+{
+	SoulsAbilitySystemComponent->OnAbilityInputPressed(InInputTag);
+}
+
+void ASoulsHeroCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
+{
+	SoulsAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
 }
