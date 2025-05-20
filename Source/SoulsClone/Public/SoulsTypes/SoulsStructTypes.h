@@ -1,0 +1,39 @@
+// Mahdiar Shoraka All Rights Reserved
+
+#pragma once
+
+#include "GameplayTagContainer.h"
+#include "SoulsStructTypes.generated.h"
+
+class UInputMappingContext;
+class USoulsHeroLinkedAnimLayer;
+class USoulsGameplayAbility;
+
+USTRUCT(BlueprintType)
+struct FSoulsHeroAbilitySet
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (Categories = "InputTag"))
+	FGameplayTag InputTag;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TSubclassOf<class USoulsGameplayAbility> AbilityToGrant;
+
+	bool IsValid() const;
+};
+
+USTRUCT(BlueprintType)
+struct FSoulsHeroWeaponData
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TSubclassOf<USoulsHeroLinkedAnimLayer> WeaponAnimLayerToLink;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UInputMappingContext* WeaponInputMappingContext;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (TitleProperty = "InputTag"))
+	TArray<FSoulsHeroAbilitySet> DefaultWeaponAbilities;
+};

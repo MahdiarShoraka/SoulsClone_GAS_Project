@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Items/Weapons/SoulsWeaponBase.h"
+#include "SoulsTypes/SoulsStructTypes.h"
 #include "SoulsHeroWeapon.generated.h"
 
 /**
@@ -13,5 +14,8 @@ UCLASS()
 class SOULSCLONE_API ASoulsHeroWeapon : public ASoulsWeaponBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "WeaponData")
+	FSoulsHeroWeaponData HeroWeaponData;
 };
