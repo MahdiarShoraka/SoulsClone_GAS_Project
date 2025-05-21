@@ -3,7 +3,7 @@
 
 #include "SoulsTypes/SoulsStructTypes.h"
 
-#include "AbilitySystem/Abilities/SoulsGameplayAbility.h"
+#include "AbilitySystem/Abilities/SoulsHeroGameplayAbility.h"
 
 bool FSoulsHeroAbilitySet::IsValid() const
 {

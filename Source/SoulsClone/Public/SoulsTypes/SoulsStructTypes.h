@@ -7,7 +7,7 @@
 
 class UInputMappingContext;
 class USoulsHeroLinkedAnimLayer;
-class USoulsGameplayAbility;
+class USoulsHeroGameplayAbility;
 
 USTRUCT(BlueprintType)
 struct FSoulsHeroAbilitySet
@@ -18,7 +18,7 @@ struct FSoulsHeroAbilitySet
 	FGameplayTag InputTag;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	TSubclassOf<class USoulsGameplayAbility> AbilityToGrant;
+	TSubclassOf<USoulsHeroGameplayAbility> AbilityToGrant;
 
 	bool IsValid() const;
 };
