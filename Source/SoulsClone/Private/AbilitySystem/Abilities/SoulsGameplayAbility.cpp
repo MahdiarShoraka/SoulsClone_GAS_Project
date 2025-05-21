@@ -37,7 +37,7 @@ UPawnCombatComponent* USoulsGameplayAbility::GetPawnCombatComponentFromActorInfo
 	return GetAvatarActorFromActorInfo()->FindComponentByClass<UPawnCombatComponent>();
 }
 
-USoulsAbilitySystemComponent* USoulsGameplayAbility::GetUSoulsAbilitySystemComponentFromActorInfo() const
+USoulsAbilitySystemComponent* USoulsGameplayAbility::GetSoulsAbilitySystemComponentFromActorInfo() const
 {
 	return Cast<USoulsAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
 }

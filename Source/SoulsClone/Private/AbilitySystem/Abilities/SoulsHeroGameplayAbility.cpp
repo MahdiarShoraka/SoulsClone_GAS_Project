@@ -4,7 +4,6 @@
 #include "AbilitySystem/Abilities/SoulsHeroGameplayAbility.h"
 #include "Characters/SoulsHeroCharacter.h"
 #include "Controllers/SoulsHeroController.h"
-//#include "AbilitySystemComponent.h"
 
 ASoulsHeroCharacter* USoulsHeroGameplayAbility::GetHeroCharacterFromActorInfo()
 {
@@ -17,7 +16,7 @@ ASoulsHeroCharacter* USoulsHeroGameplayAbility::GetHeroCharacterFromActorInfo()
 
 ASoulsHeroController* USoulsHeroGameplayAbility::GetHeroControllerFromActorInfo()
 {
-	if (!CachedSoulsHeroCharacter.IsValid())
+	if (!CachedSoulsHeroController.IsValid())
 	{
 		CachedSoulsHeroController = Cast<ASoulsHeroController>(CurrentActorInfo->PlayerController);
 	}

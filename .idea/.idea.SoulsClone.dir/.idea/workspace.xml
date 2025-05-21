@@ -8,19 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11408c6e-8b22-4204-b9d0-9813181d4bed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/SoulsTypes/SoulsStructTypes.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/SoulsTypes/SoulsStructTypes.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoulsClone.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoulsClone.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Assets/HeroCharacter/SK_Hero.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/DA_InputConfig.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/DA_InputConfig.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/AnimInstances/Hero/SoulsHeroLinkedAnimLayer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/AnimInstances/Hero/SoulsHeroLinkedAnimLayer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/Components/Combat/HeroCombatComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/Components/Combat/HeroCombatComponent.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/DataAssets/StartUpData/DataAsset_HeroStartUpData.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/DataAssets/StartUpData/DataAsset_HeroStartUpData.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/PlayerCharacter/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/PlayerCharacter/Input/IMC_Default.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/Abilities/SoulsGameplayAbility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/Abilities/SoulsGameplayAbility.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/Abilities/SoulsHeroGameplayAbility.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/Abilities/SoulsHeroGameplayAbility.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/SoulsAbilitySystemComponent.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/AbilitySystem/SoulsAbilitySystemComponent.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/Items/Weapons/SoulsHeroWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/Items/Weapons/SoulsHeroWeapon.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Private/SoulsGameplayTags.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Private/SoulsGameplayTags.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/AnimInstances/Hero/SoulsHeroLinkedAnimLayer.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/AnimInstances/Hero/SoulsHeroLinkedAnimLayer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/Components/Combat/HeroCombatComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/Components/Combat/HeroCombatComponent.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/StartUpData/DataAsset_HeroStartUpData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/DataAssets/StartUpData/DataAsset_HeroStartUpData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/Abilities/SoulsGameplayAbility.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/Abilities/SoulsGameplayAbility.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/SoulsAbilitySystemComponent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/AbilitySystem/SoulsAbilitySystemComponent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/Items/Weapons/SoulsHeroWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/Items/Weapons/SoulsHeroWeapon.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SoulsClone/Public/SoulsGameplayTags.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/Public/SoulsGameplayTags.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SoulsClone/SoulsClone.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SoulsClone/SoulsClone.Build.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +47,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="cidr-memory-view://6" root0="FORCE_HIGHLIGHTING" />
+    <setting file="cidr-memory-view://1" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Plugins/Runtime/GameplayAbilities/Intermediate/Build/Win64/UnrealEditor/Inc/GameplayAbilities/UHT/GameplayAbility.generated.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Core/Public/Containers/Array.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/Components/PrimitiveComponent.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_5.5/Engine/Source/Runtime/Engine/Classes/GameFramework/Character.h" root0="FORCE_HIGHLIGHTING" />
@@ -182,7 +184,8 @@
       <workItem from="1747574581081" duration="5979000" />
       <workItem from="1747595957272" duration="1223000" />
       <workItem from="1747660608285" duration="6788000" />
-      <workItem from="1747745855682" duration="8664000" />
+      <workItem from="1747745855682" duration="18951000" />
+      <workItem from="1747831677352" duration="6454000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit + Input Configuration">
       <option name="closed" value="true" />
@@ -264,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747669818743</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added Anim Layers + Added SoulsStructTypes">
+      <option name="closed" value="true" />
+      <created>1747755983904</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747755983904</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +306,8 @@
     <MESSAGE value="Made the combat component and Registered Weapon" />
     <MESSAGE value="Input setup for Equip and Unequip weapon" />
     <MESSAGE value="Ability Input setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ability Input setup" />
+    <MESSAGE value="Added Anim Layers + Added SoulsStructTypes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Anim Layers + Added SoulsStructTypes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

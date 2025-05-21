@@ -36,5 +36,5 @@ protected:
 	UPawnCombatComponent* GetPawnCombatComponentFromActorInfo() const;
 
 	UFUNCTION(BlueprintPure, Category = "Souls|Ability")
-	USoulsAbilitySystemComponent* GetUSoulsAbilitySystemComponentFromActorInfo() const;
+	USoulsAbilitySystemComponent* GetSoulsAbilitySystemComponentFromActorInfo() const;
 };
