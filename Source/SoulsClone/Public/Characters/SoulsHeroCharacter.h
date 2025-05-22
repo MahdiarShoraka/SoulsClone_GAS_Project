@@ -21,10 +21,16 @@ class SOULSCLONE_API ASoulsHeroCharacter : public ASoulsBaseCharacter
 	GENERATED_BODY()
 public:
 	ASoulsHeroCharacter();
+
+	//~ Begin IPawnCombatInterface Interface
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+	//~ End IPawnCombatInterface Interface
+	
 protected:
 	//~ Begin APawn Interface
 	virtual void PossessedBy(AController* NewController) override;
 	//~ End APawn Interface
+	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual void BeginPlay() override;
 

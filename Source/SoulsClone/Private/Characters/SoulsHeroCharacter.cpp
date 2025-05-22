@@ -42,6 +42,11 @@ ASoulsHeroCharacter::ASoulsHeroCharacter()
 	HeroCombatComponent	= CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
 }
 
+UPawnCombatComponent* ASoulsHeroCharacter::GetPawnCombatComponent() const
+{
+	return HeroCombatComponent;
+}
+
 void ASoulsHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);

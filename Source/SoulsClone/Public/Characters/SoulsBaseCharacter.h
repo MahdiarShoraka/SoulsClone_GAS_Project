@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
+#include "Interfaces/PawnCombatInterface.h"
 #include "SoulsBaseCharacter.generated.h"
 
 // Forward Declarations
@@ -13,7 +14,7 @@ class USoulsAttributeSet;
 class UDataAsset_StartUpDataBase;
 
 UCLASS()
-class SOULSCLONE_API ASoulsBaseCharacter : public ACharacter, public IAbilitySystemInterface
+class SOULSCLONE_API ASoulsBaseCharacter : public ACharacter, public IAbilitySystemInterface, public IPawnCombatInterface
 {
 	GENERATED_BODY()
 
@@ -25,6 +26,10 @@ public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	//~ End IAbilitySystemInterface Interface
 
+	//~ Begin IPawnCombatInterface Interface
+	virtual UPawnCombatComponent* GetPawnCombatComponent() const override;
+	//~ End IPawnCombatInterface Interface
+	
 protected:
 	//~ Begin APawn Interface
 	virtual void PossessedBy(AController* NewController) override;

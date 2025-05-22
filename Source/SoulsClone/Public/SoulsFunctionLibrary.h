@@ -4,16 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "SoulsTypes/SoulsEnumTypes.h"
 #include "SoulsFunctionLibrary.generated.h"
 
+class UPawnCombatComponent;
 class USoulsAbilitySystemComponent;
-
-UENUM()
-enum class ESoulsConfirmType : uint8
-{
-	Yes,
-	No
-};
 
 /**
  * 
@@ -36,4 +31,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Souls|FunctionLibrary", meta = (DisplayName = "Does Actor Have Gameplay Tag", ExpandEnumAsExecs = "OutConfirmType"))
 	static void BP_DoesActorHaveGameplayTag(AActor* InActor, FGameplayTag TagToCheck, ESoulsConfirmType& OutConfirmType);
+
+	static UPawnCombatComponent* NativeGetPawnCombatComponentFromActor(AActor* InActor);
+
+	UFUNCTION(BlueprintCallable, Category = "Souls|FunctionLibrary", meta = (DisplayName = "Get Pawn Combat Component From Actor", ExpandEnumAsExecs = "OutValidType"))
+	static UPawnCombatComponent* BP_GetPawnCombatComponentFromActor(AActor* InActor, ESoulsValidType& OutValidType);
+	
 };

@@ -8,6 +8,7 @@
 
 class USoulsGameplayAbility;
 class USoulsAbilitySystemComponent;
+class UGameplayEffect;
 
 /**
  * Data Shared by the Player and Enemy
@@ -26,6 +27,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
 	TArray<TSubclassOf<USoulsGameplayAbility>> ReactiveAbilities;
+
+	UPROPERTY(EditDefaultsOnly, Category="StartUpData")
+	TArray<TSubclassOf<UGameplayEffect>> StartUpGameplayEffects;
 
 	void GrantAbilities(const TArray<TSubclassOf<USoulsGameplayAbility>>& InAbilitiesToGive, USoulsAbilitySystemComponent* InASCToGive, int32 ApplyLevel = 1); 
 };

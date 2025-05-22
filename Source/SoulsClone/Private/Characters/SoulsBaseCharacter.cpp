@@ -25,6 +25,11 @@ UAbilitySystemComponent* ASoulsBaseCharacter::GetAbilitySystemComponent() const
 	return GetSoulsAbilitySystemComponent();
 }
 
+UPawnCombatComponent* ASoulsBaseCharacter::GetPawnCombatComponent() const
+{
+	return nullptr;
+}
+
 void ASoulsBaseCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
