@@ -29,4 +29,7 @@ namespace SoulsGameplayTags
 	SOULSCLONE_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Event_Unequip_Axe);
 
 	SOULSCLONE_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Player_Status_JumpToFinisher);
+
+	/** Enemy tags **/
+	SOULSCLONE_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Enemy_Weapon);
 }
