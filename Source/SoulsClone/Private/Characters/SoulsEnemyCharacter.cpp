@@ -52,7 +52,6 @@ void ASoulsEnemyCharacter::InitEnemyStartUpData()
 			if (UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.Get())
 			{
 				LoadedData->GiveToAbilitySystemComponent(SoulsAbilitySystemComponent);
-				Debug::Print(TEXT("Enemy Start Up Data Loaded"), FColor::Green);
 			}
 		}
 		));	// Lambda is a nameless function that can be declared and defined in the same line
