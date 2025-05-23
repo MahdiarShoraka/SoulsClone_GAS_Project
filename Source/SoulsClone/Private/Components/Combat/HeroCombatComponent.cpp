@@ -14,12 +14,19 @@ ASoulsHeroWeapon* UHeroCombatComponent::GetHeroCarriedWeaponByTag(FGameplayTag I
 	return Cast<ASoulsHeroWeapon>(GetCharacterCarriedWeaponByTag(InWeaponTag));
 }
 
+ASoulsHeroWeapon* UHeroCombatComponent::GetHeroCurrentEquippedWeapon() const
+{
+	return Cast<ASoulsHeroWeapon>(GetCharacterCurrentEquippedWeapon());
+}
+
+float UHeroCombatComponent::GetHeroCurrentEquippedWeaponDamageAtLevel(float InLevel) const
+{
+	return GetHeroCurrentEquippedWeapon()->HeroWeaponData.WeaponBaseDamage.GetValueAtLevel(InLevel);
+}
+
 void UHeroCombatComponent::OnHitTargetActor(AActor* HitActor)
 {
-	if (OverlappedActors.Contains(HitActor)) // damage the actor only once per attack
-	{
-		return;
-	}
+	if (OverlappedActors.Contains(HitActor)) return; // damage the actor only once per attack
 	OverlappedActors.AddUnique(HitActor);
 
 	FGameplayEventData EventData;

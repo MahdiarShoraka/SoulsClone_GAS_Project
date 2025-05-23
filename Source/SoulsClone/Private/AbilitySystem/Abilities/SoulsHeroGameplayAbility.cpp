@@ -33,7 +33,7 @@ UHeroCombatComponent* USoulsHeroGameplayAbility::GetHeroCombatComponentFromActor
 
 FGameplayEffectSpecHandle USoulsHeroGameplayAbility::MakeHeroDamageEffectSpecHandle(
 	TSubclassOf<UGameplayEffect> EffectClass, float InWeaponBaseDamage, FGameplayTag InCurrentAttackTypeTag,
-	int32 InCurrentComboCount)
+	int32 InUsedComboCount)
 {
 	check(EffectClass);
 
@@ -48,7 +48,7 @@ FGameplayEffectSpecHandle USoulsHeroGameplayAbility::MakeHeroDamageEffectSpecHan
 	EffectSpecHandle.Data->SetSetByCallerMagnitude(SoulsGameplayTags::Shared_SetByCaller_BaseDamage, InWeaponBaseDamage);
 	if (InCurrentAttackTypeTag.IsValid())
 	{
-		EffectSpecHandle.Data->SetSetByCallerMagnitude(InCurrentAttackTypeTag, InCurrentComboCount);
+		EffectSpecHandle.Data->SetSetByCallerMagnitude(InCurrentAttackTypeTag, InUsedComboCount);
 	}
 	return EffectSpecHandle;
 }

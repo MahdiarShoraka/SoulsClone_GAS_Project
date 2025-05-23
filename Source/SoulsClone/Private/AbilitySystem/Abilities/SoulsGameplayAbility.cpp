@@ -3,6 +3,7 @@
 #include "AbilitySystem/Abilities/SoulsGameplayAbility.h"
 #include "AbilitySystem/SoulsAbilitySystemComponent.h"
 #include "Components/Combat/PawnCombatComponent.h"
+#include "AbilitySystemBlueprintLibrary.h"
 
 void USoulsGameplayAbility::OnGiveAbility(const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilitySpec& Spec)
 {
@@ -40,4 +41,21 @@ UPawnCombatComponent* USoulsGameplayAbility::GetPawnCombatComponentFromActorInfo
 USoulsAbilitySystemComponent* USoulsGameplayAbility::GetSoulsAbilitySystemComponentFromActorInfo() const
 {
 	return Cast<USoulsAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
+}
+
+FActiveGameplayEffectHandle USoulsGameplayAbility::NativeApplyEffectSpecHandleToTarget(AActor* TargetActor,
+	const FGameplayEffectSpecHandle InSpecHandle)
+{
+	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
+	check(TargetASC && InSpecHandle.IsValid());
+	
+	return GetSoulsAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
+}
+
+FActiveGameplayEffectHandle USoulsGameplayAbility::BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor,
+	const FGameplayEffectSpecHandle InSpecHandle, ESoulsSuccessType& OutSuccessType)
+{
+	FActiveGameplayEffectHandle ActiveGameplayEffectHandle = NativeApplyEffectSpecHandleToTarget(TargetActor, InSpecHandle);
+	OutSuccessType = ActiveGameplayEffectHandle.WasSuccessfullyApplied()? ESoulsSuccessType::Successful : ESoulsSuccessType::Failed;
+	return ActiveGameplayEffectHandle;
 }
