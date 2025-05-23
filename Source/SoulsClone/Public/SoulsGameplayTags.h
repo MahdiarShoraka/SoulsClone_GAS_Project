@@ -36,4 +36,6 @@ namespace SoulsGameplayTags
 	/** Shared tags **/
 	SOULSCLONE_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_Event_MeleeHit);
 	
+	SOULSCLONE_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Shared_SetByCaller_BaseDamage);
+	
 }
