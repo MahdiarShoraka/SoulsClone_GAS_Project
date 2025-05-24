@@ -48,4 +48,7 @@ public:
 	FGameplayAttributeData DefensePower;
 	ATTRIBUTE_ACCESSORS(USoulsAttributeSet, DefensePower);
 
+	UPROPERTY(BlueprintReadOnly, Category = "Damage")
+	FGameplayAttributeData DamageTaken;
+	ATTRIBUTE_ACCESSORS(USoulsAttributeSet, DamageTaken);
 };
