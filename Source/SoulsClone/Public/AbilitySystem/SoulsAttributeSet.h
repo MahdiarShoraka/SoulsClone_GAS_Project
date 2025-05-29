@@ -24,6 +24,8 @@ class SOULSCLONE_API USoulsAttributeSet : public UAttributeSet
 public:
 	USoulsAttributeSet();
 
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData &Data) override;
+	
 	UPROPERTY(BlueprintReadOnly, Category = "Health")
 	FGameplayAttributeData CurrentHealth;
 	ATTRIBUTE_ACCESSORS(USoulsAttributeSet, CurrentHealth);

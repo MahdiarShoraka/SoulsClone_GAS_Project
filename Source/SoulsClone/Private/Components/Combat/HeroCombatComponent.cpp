@@ -37,9 +37,17 @@ void UHeroCombatComponent::OnHitTargetActor(AActor* HitActor)
 		GetOwningPawn(),
 		SoulsGameplayTags::Shared_Event_MeleeHit,
 		EventData);
+
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+	GetOwningPawn(),
+	SoulsGameplayTags::Player_Event_HitPause,
+	FGameplayEventData());
 }
 
 void UHeroCombatComponent::OnWeaponPulledFromTargetActor(AActor* InteractedActor)
 {
-	
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(
+	GetOwningPawn(),
+	SoulsGameplayTags::Player_Event_HitPause,
+	FGameplayEventData());
 }
