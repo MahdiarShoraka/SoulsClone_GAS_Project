@@ -7,8 +7,7 @@
 #include "DataAssets/StartUpData/DataAsset_EnemyStartUpData.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/AssetManager.h"
-
-#include "SoulsDebugHelper.h"
+#include "Components/UI/EnemyUIComponent.h"
 
 ASoulsEnemyCharacter::ASoulsEnemyCharacter()
 {
@@ -25,13 +24,17 @@ ASoulsEnemyCharacter::ASoulsEnemyCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 1000.f;
 
 	EnemyCombatComponent = CreateDefaultSubobject<UEnemyCombatComponent>(TEXT("EnemyCombatComponent"));
-	
-	
+	EnemyUIComponent = CreateDefaultSubobject<UEnemyUIComponent>(TEXT("EnemyUIComponent"));
 }
 
 UPawnCombatComponent* ASoulsEnemyCharacter::GetPawnCombatComponent() const
 {
 	return EnemyCombatComponent;
+}
+
+UPawnUIComponent* ASoulsEnemyCharacter::GetPawnUIComponent() const
+{
+	return EnemyUIComponent;
 }
 
 void ASoulsEnemyCharacter::PossessedBy(AController* NewController)

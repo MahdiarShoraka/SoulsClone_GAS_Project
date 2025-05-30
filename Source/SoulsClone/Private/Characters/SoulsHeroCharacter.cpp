@@ -13,9 +13,8 @@
 #include "Engine/LocalPlayer.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "Components/Combat/HeroCombatComponent.h"
-
-#include "SoulsDebugHelper.h"
 #include "AbilitySystem/SoulsAbilitySystemComponent.h"
+#include "Components/UI/HeroUIComponent.h"
 
 ASoulsHeroCharacter::ASoulsHeroCharacter()
 {
@@ -40,11 +39,22 @@ ASoulsHeroCharacter::ASoulsHeroCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 
 	HeroCombatComponent	= CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
+	HeroUIComponent	= CreateDefaultSubobject<UHeroUIComponent>(TEXT("HeroUIComponent"));
 }
 
 UPawnCombatComponent* ASoulsHeroCharacter::GetPawnCombatComponent() const
 {
 	return HeroCombatComponent;
+}
+
+UPawnUIComponent* ASoulsHeroCharacter::GetPawnUIComponent() const
+{
+	return HeroUIComponent;
+}
+
+UHeroUIComponent* ASoulsHeroCharacter::GetHeroUIComponent() const
+{
+	return HeroUIComponent;
 }
 
 void ASoulsHeroCharacter::PossessedBy(AController* NewController)
