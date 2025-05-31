@@ -63,11 +63,10 @@ void USoulsAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffectM
 
 		PawnUIComponent->OnCurrentHealthChanged.Broadcast(GetCurrentHealth()/GetMaxHealth());
 		
-		if (NewCurrentHealth == 0.f)
+		if (GetCurrentHealth() == 0.f)
 		{
 			USoulsFunctionLibrary::AddGameplayTagToActorIfNone(
 				Data.Target.GetAvatarActor(), SoulsGameplayTags::Shared_Status_Death);
-			
 		}
 	}
 }
